@@ -6,9 +6,9 @@ export default function ChatMessage(props) {
     const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
   
     return (
-      <div className={messageClass === 'sent' ? 'text-blue-400' : 'text-green-500'}>
-        <img src={photoURL} />
-        <p>{text}</p>
+      <div className={`${messageClass === 'sent' ? 'self-end flex-row-reverse' : 'self-start'} p-4 flex items-center gap-1`}>
+        <img className="w-9 h-9 rounded-full" src={photoURL} alt="user profile pic" />
+        <p className={`${messageClass === 'sent' ? 'bg-blue-400 text-white' : 'bg-white text-gray-600'} p-4 rounded-full h-9 flex items-center`}>{text}</p>
       </div>
     )
   }

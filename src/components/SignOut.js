@@ -2,6 +2,6 @@ import { auth } from "@/app/page"
 
 export default function SignOut() {
     return auth.currentUser && (
-      <button onClick={() => auth.signOut()}>Sign Out</button>
+      <button className="text-white" onClick={() => auth.signOut()}>Sign Out</button>
     )
 }
